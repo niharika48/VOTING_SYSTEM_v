@@ -9,6 +9,13 @@
   <button onclick="vote('B')">Vote B</button>
   <button onclick="vote('C')">Vote C</button>
   <p id="result"></p>
-
+  <script>
+    const votes = { A: 0, B: 0, C: 0 };
+    function vote(candidate) {
+      votes[candidate]++;
+      document.getElementById("result").innerText =
+        `A: ${votes.A}, B: ${votes.B}, C: ${votes.C}`;
+    }
+  </script>
 
 
